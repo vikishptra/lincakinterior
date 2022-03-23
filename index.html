@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Quicksand&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@200&family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="./TW-ELEMENTS-PATH/dist/js/index.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&display=swap" rel="stylesheet">
+     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              },
+              fontFamily : {
+                  quiksand : ['Quicksand'],
+                  intern : ['Inter'],
+                  comic  : ['Comic+Neue:ital@1'],
+              },
+              spacing : {
+                  '500' : '-500px',
+                  '135' : '135px',
+                  '80persen'  : '80%',
+                  '90persen'  : '90%',
+                  '70persen'  : '70%',
+                  '250'       : '250px', 
+              },
+              fontSize : {
+                '40'  : '40px',
+                '18'  : '18px',
+                '20'  : '20px',
+                '12'  : '12px'
+              },
+              transitionDuration: {
+                  '0': '0ms',
+                  '2000': '2000ms',
+              }
+            }
+          }
+        }
+      </script>
+    <title>Lincak Interior</title>
+    <style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    .header{
+        min-height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(2,1,1,0.5),rgba(1,1,1,0.5)),url('gambar.png');
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+    #navLinks{
+        transition: 1s;
+    }
+    div .fa-solid{
+        font-size: 30px;
+    }
+    footer #footer{
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      min-height: 200px;
+      background-image: url('footer.png');
+    }
+    @media only screen and (max-width: 375px) {
+       #close{
+         margin-left: 225px;
+         margin-right: 225px;
+       }
+    }
+    @media only screen and (max-width: 600px) {
+    footer #footer{
+      width: 100%;
+      min-height: 70px;
+      box-sizing: border-box;
+    }
+   }
+   @media only screen and (max-width: 400px) {
+    footer #footer{
+      width: 100%;
+      max-height: 77px;
+      box-sizing: border-box;
+    }
+  }
+   @media only screen and (min-width: 1200px) {
+    .header{
+      background-image: url('gambar.png');
+    }
+    #navLinks{
+      left: 200px;
+      background: none;
+      width: 100%;
+      margin-top: -40px;
+    }
+    #navLinks ul li{
+      display: inline;
+      padding-right: 20px;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 400;
+    }
+    li a:hover{
+      color: white;
+    }
+    nav .fa{
+      margin-left: -700px;
+    }
+    #text-nav{
+      width: 600px;
+      margin-left: 195px;
+      margin-top:  100px;
+    }
+    #text-nav h1{
+      font-family: 'Quicksand', sans-serif;
+      font-size: 60px;
+      font-weight: 900;
+      padding-bottom: 20px;
+    }
+    section .judul h1{
+      font-size: 25px;
+    }
+    section .judul p{
+      font-size: 16px;
+      padding-bottom: 40px;
+    }
+    section .cards{
+      width: 25%;
+      float: left;
+    }
+    div.cards.satu{
+      margin-left: 90px;
+    }
+    div.cards{
+      margin-left: 90px;
+    }
+    .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+    }
+    .clearfix{
+      padding-bottom: 50px;
+    }
+    section.container.card{
+      width: 80%;
+    }
+    section .cards2{
+      width: 50%;
+    }
+    div .container img{
+      display: block;
+      margin-left: 250px;
+      margin-right: -90px;
+    }
+    section .card{
+      width: 40%;
+      background: none;
+      box-shadow: none;
+    }
+    section .container-footer-satu{
+      display: flex;
+      justify-content: flex-end;
+    }
+    section .container-footer-dua{
+      display: flex;
+      justify-content: flex-end;
+    }
+    section .card h3{
+      font-size: 25px;
+    }
+    section .card p{
+      font-size: 16px;
+    }
+    footer #footer h4{
+      font-size: 30px;
+    }
+    footer #footer p{
+      font-size: 20px;
+      margin-top: 10px;
+    }
+    footer #footer{
+      padding-top: 20px;
+    }
+    footer #footer i{
+      font-size: 25px;
+      margin-top: 10px;
+    }
+  }
+    </style>
+</head>
+<body id="home">
+    <section class="header sm:header: h-3/5">
+        <nav class="container">
+            <div class="absolute bg-white h-full w-70persen top-0 left-500  border-white" id="navLinks">
+                <i class="fa fa-times block mx-250 text-2xl mt-4 text-black sm:mx-33" aria-hidden="true" onclick="hideMenu()" id="close"></i>
+                <ul class="inline-block ml-2 font-quiksand font-bold text-xl mt-2 text-black after:none p-4">
+                    <li class="pb-7"><a href="#home">Beranda</a></li>
+                    <li class="pb-7"><a href="#layanan">Layanan Kami</a></li>
+                    <li class="pb-7"><a href="#carousel">Desain</a></li>
+                    <li class="pb-7"><a href="#">Kontak</a></li>
+                </ul>
+            </div>  
+            <i class="fa fa-bars ml-8 mt-4 text-2xl text-white" aria-hidden="true" onclick="showMenu()"></i>
+        </nav>
+        <div class="container mt-28 w-80persen" id="text-nav" data-aos="fade-down">
+            <h1 class="text-4xl font-intern ml-8 font-bold"><span class="text-white bg-clip-text">Lincak Interior</span></h1>
+            <p class="text-18 font-intern ml-8 text-align-left font-sans text-slate-100">Lincak interior adalah penyedia jasa desain interior pada masyarakat. Konsistensi karakter desain lincak interior mengutamakan keramahan budaya para user yang dijadikan poin dalam pengembangan desain secara kontemporer.</p>
+            <button class="transition duration-500 border-0 text-md h-6 w-46 bg-green-400 text-white mt-2 px-3 rounded-xl ml-8 font-quiksand font-bold cursor-pointer text-15">Informasi Lainnya</button>
+            </div>
+        </div>
+    </section>
+    <section class="w-full mt-10" id="layanan">
+        <div class="container"data-aos="fade-down">
+          <div class="judul">
+            <h1 class="text-20 font-intern text-center mt-4">LAYANAN KAMI</h1>
+            <p class="text-md text-center">Memberikan penawaran ide desain interior<br>untuk skala kecil hingga menengah.</p>
+          </div>
+            <div class="cards satu w-10/12 mx-auto bg-white mt-10 shadow-sm shadow-slate-500 p-6 rounded-lg">
+                    <i class="fa-solid fa-house-chimney text-center block py-2"></i>
+                    <h2 class="text-center font-intern text-lg">INTERIOR HUNIAN</h2>
+                    <p class="text-center text-xs">Kamar Tidur | Ruang Tamu | Dapur | Ruang Keluarga | Ruang Makan | Kamar Mandi | dll</p>
+            </div>
+            <div class="cards w-10/12 mx-auto bg-white mt-10 shadow-sm shadow-slate-500 p-6 rounded-lg">
+                    <i class="fa-solid fa-house-chimney text-center block py-2"></i>
+                    <h2 class="text-center font-intern text-lg">INTERIOR KOMERSIL</h2>
+                    <p class="text-center text-xs">Retail Toko | Ruang Pelayanan | Ruang Kantor | Ruang Metting | Ruang Kerja | dll</p>
+            </div>
+            <div class="cards w-10/12 mx-auto bg-white mt-10 shadow-sm shadow-slate-500 p-6 rounded-lg">
+                    <i class="fa-solid fa-house-chimney text-center block py-2"></i>
+                    <h2 class="text-center font-intern text-lg">INTERIOR PUBLIC</h2>
+                    <p class="text-center text-xs">Mushola | Masjid | Pos Ronda | Ruang Perpustakaan | Pondok Pesantern | dll</p>
+            </div>
+        </div>
+    </section>
+    <div class="clearfix"></div>
+    <section class="container card w-90persen mx-auto bg-white mt-10 shadow-md shadow-slate-500 rounded-lg" id="carousel">
+        <div id="carouselExampleControls" class="carousel slide relative" data-bs-ride="carousel"data-aos="fade-down">
+            <div class="carousel-inner relative w-full overflow-hidden">
+              <div class="carousel-item active relative float-left w-full">
+                <img
+                  src="image/_HOUSING1.png"
+                  class="block w-full"
+                  alt="Wild Landscape"
+                />
+              </div>
+              <div class="carousel-item relative float-left w-full">
+                <img
+                  src="image/_HOUSING2.png"
+                  class="block w-full"
+                  alt="Camera"
+                />
+              </div>
+              <div class="carousel-item relative float-left w-full">
+                <img
+                  src="image/_RSBHAYANGKARA2.png"
+                  class="block w-full"
+                  alt="Exotic Fruits"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section> 
+    <section class="mt-10">
+      <div class="cards2"data-aos="fade-right">
+        <div class="container flex p-4 box-border">
+          <img src="image/_AMMAR.jpg" alt="" width="50%" class="flex-1 mx-1 -ml-1 shadow-md shadow-slate-700  ">
+          <img src="image/_MEISA.jpg" alt="" width="50%" class="flex-1 mx-1 -ml 2 shadow-md shadow-slate-700">
+      </div>
+      <div class="container flex mt-2 p-4 box-border">
+          <img src="image/_RETAILB2.png" alt="" width="50%" class="flex-1 mx-1 -ml-1 shadow-md shadow-slate-700">
+          <img src="image/_RETAILA3.png" alt="" width="50%" class="flex-1 mx-1 -ml 2 shadow-md shadow-slate-700">
+      </div>
+      <div class="container flex mt-2 p-4 box-border">
+          <img src="image/_RETAILC.png" alt="" width="50%" class="flex-1 mx-1 -ml-1 shadow-md shadow-slate-700">
+          <img src="image/_OFFICE2.jpg" alt="" width="50%" class="flex-1 mx-1 -ml 2 shadow-md shadow-slate-700">
+      </div>
+    </div>
+      
+    </section>
+    <section class="mt-10 footer-text">
+          <div class="container"data-aos="fade-down">
+            <div class="card satu w-10/12 mx-auto bg-white mt-10 shadow-sm shadow-slate-500 p-6 rounded-lg">
+              <h3 class="text-intern text-center text-2xl font-semibold font-sans ">YANG KAMI TAWARKAN</h3>
+              <p class="text-sm text-center text-intern p-1">Beberapa jenis layanan kami dengan menyesuaikan kebutuhan anda</p>
+            </div>
+            <div class="container-footer-satu">
+              <div class="card w-10/12 mx-auto bg-white mt-10 shadow-sm shadow-slate-500 p-6 rounded-lg">
+                <h3 class="text-intern text-center text-2xl font-semibold font-sans">SEMATIK DESIGN</h3>
+                <p class="text-intern text-center p-1 text-sm">Pembuatan Skema atau ide Design Interior<br>yang akan direalisasikan</p>
+              </div>
+              <div class="card w-10/12 mx-auto bg-white mt-10 shadow-sm shadow-slate-500 p-6 rounded-lg">
+                <h3 class="text-intern text-center text-2xl font-semibold font-sans">DESIGN AND DRAFT</h3>
+                <p class="text-intern text-center p-1 text-sm">Pembuatan Desain Interior dari tahap skema desain hingga penyusunan Detailed Engineering Design</p>
+              </div>
+            </div>
+            <div class="container-footer-dua">
+            <div class="card w-10/12 mx-auto bg-white mt-10 shadow-sm shadow-slate-500 p-6 rounded-lg">
+              <h3 class="text-intern text-center text-2xl font-semibold font-sans">INTERIOR DESIGNING</h3>
+              <p class="text-intern text-center p-1 text-sm">Pembuatan Desain Interior dari skema desain desain hingga pengembangan desain</p>
+            </div>
+            <div class="card w-10/12 mx-auto bg-white mt-10 shadow-sm shadow-slate-500 p-6 rounded-lg">
+              <h3 class="text-intern text-center text-2xl font-semibold font-sans">DESIGN AND BUILD</h3>
+              <p class="text-intern text-center p-1 text-sm">Pembuatan Desain Interior dengan dokumen gambar lengkap sekaligus proses realisasi lapangan</p>
+            </div>
+          </div>
+          </div>
+    </section> 
+    <footer class="mt-10 bg-[#8B8B8B]-to-r from-[#ebebeb]">
+        <div id="footer">
+          <div class="container-text-footer">
+            <h4 class="font-sans font-bold pt-3 px-3 font-intern text-xs">LEBIH DEKAT DENGAN KAMI</h4>
+            <p class="font-sans font-quiksand text-xs px-3">Untuk pertanyaan silahkan email ke </p>
+            <p class="font-sans font-quiksand text-xs px-3">lincakinterior@gmail.com</p>
+            <i class="fa fa-facebook-square text-12 pl-3"></i>
+            <i class="fa fa-instagram-square text-12"></i>
+            <i class="fa fa-twitter-square text-12"></i>
+            <i class="fa fa-linkedin-square text-12"></i>
+          </div>
+        </div>
+    </footer>
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        var carousel = document.getElementById("carousel");
+        function showMenu (){
+            navLinks.style.left = "0";
+            navLinks.style.position ="fixed";
+            navLinks.style.zIndex = "1";
+        }
+        function hideMenu(){
+            navLinks.style.left = "-500px";
+        }
+    </script>
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+  
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+          });
+         });
+      })
+      AOS.init({
+          easing: 'ease-out-back',
+          duration: 2000
+      });
+      </script>
+      <script>
+        hljs.initHighlightingOnLoad();
+  
+        $('.hero__scroll').on('click', function(e) {
+            $('html, body').animate({
+                scrollTop: $(window).height()
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
